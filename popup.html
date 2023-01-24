@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./popup.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Timer</h1>
+    <form>
+      Hours: <input class="input" id="hour" type="number">
+      Minute: <input class="input" id="minute" type="number">
+      Second: <input class="input" id="second" type="number">
+    </form>
+    <p>or choose an end time:</p>
+    <form><input id="end-time" type="datetime-local" /></form>
+
+    <div class="container">
+      <div class="circular-progress">
+          <span class="progress-value">00:00:00</span>
+      </div>
+    </div>
+
+    <div id="buttons">
+      <button id="start">Start</button>
+      <button disabled id="stop">Stop</button>
+    </div>
+
+    <p id="remaining"></p>
+
+    <div>
+      <p id="timeout" class="hidden">Time's up!</p>
+    </div>
+
+    <script src="./popup.js"></script>
+  </body>
+</html>
